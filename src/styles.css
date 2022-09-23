@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Share+Tech+Mono&display=swap');
+
+
+:root {
+    --primary-color: hsl(157, 100%, 50%);
+    --secondary-color: hsl(277, 100%, 50%);
+    --tertiary-color: hsl(37, 100%, 50%);
+    --background-primary: hsl(0, 0%, 7%);
+    --background-secondary: hsl(0, 0%, 12%);
+    --background-mix: hsl(0, 0%, 9%);
+    --javascript-color: hsl(54, 83%, 51%);
+    --angular-color: hsl(359, 73%, 50%);
+    --react-color: hsl(189, 100%, 52%);
+    --vue-color: hsl(154, 49%, 49%);
+    --css-color: hsl(222, 88%, 55%);
+    --html-color: hsl(19, 88%, 54%);
+    --git-color: hsl(300, 100%, 25%);
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-primary);
+}

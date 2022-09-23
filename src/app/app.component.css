@@ -1,0 +1,416 @@
+/* Navigation Bar CSS */
+
+.ws-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    padding: 0px 50px;
+    margin-bottom: 20px;
+    font-family: 'Share Tech Mono';
+    background: var(--background-mix);
+    color: var(--primary-color);
+}
+
+.ws-nav-header {
+    font-size: 32px;
+    position: relative;
+}
+
+.ws-nav-header:hover {
+    cursor: pointer;
+}
+
+.ws-nav-header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.ws-nav-header:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.ws-nav-links {
+    font-size: 28px;
+}
+
+.ws-nav-link {
+    display: inline-block;
+    position: relative;
+}
+
+.ws-nav-link:hover {
+    cursor: pointer;
+}
+
+.ws-nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.ws-nav-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.ws-nav-link:nth-child(1) {
+    margin-right: 50px;
+}
+
+.ws-nav-link:nth-child(2) {
+    margin-right: 50px;
+}
+
+
+/* Container CSS */
+
+.ws-container {
+    width: 70%;
+    margin: auto;
+}
+
+
+/* Hero Banner */
+
+.ws-hero {
+    height: 600px;
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+        'one two';
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.ws-hero::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 150px;
+    width: 125px;
+    border-left: 4px solid var(--primary-color);
+    border-top: 4px solid var(--primary-color);
+    border-top-left-radius: 10px;
+}
+
+.ws-hero::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    height: 150px;
+    width: 125px;
+    border-right: 4px solid var(--primary-color);
+    border-bottom: 4px solid var(--primary-color);
+    border-bottom-right-radius: 10px;
+}
+
+.ws-hero-cell.new {
+    grid-area: one;
+    padding: 20px 0px 20px 20px;
+}
+
+.ws-hero-cell.title {
+    grid-area: two;
+    padding: 20px 20px 0px 0px;
+}
+
+.ws-title-card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ws-title-card-information {
+    flex-grow: 1;
+    width: 100%;
+    margin-bottom: 25px;
+    background: url('../assets/code.JPG');
+    position: relative;
+}
+
+.ws-title-card-information-header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0px 10px 10px;
+    background: var(--background-secondary);
+    font-size: 32px;
+    font-family: 'Share Tech Mono';
+    color: var(--primary-color);
+}
+
+.ws-title-card-banner {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 0px 25px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.ws-title-card-banner.secondary {
+    background: var(--secondary-color);
+}
+
+.ws-title-card-banner.tertiary {
+    background: var(--tertiary-color);
+    margin-bottom: 21px;
+}
+
+.ws-title-card-banner {
+    cursor: pointer;
+}
+
+.ws-title-card-banner-header {
+    font-size: 20px;
+    font-family: 'Roboto';
+}
+
+.ws-hero-article {
+    height: 100px;
+    background: var(--background-secondary);
+    /* padding: 10px; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow: hidden;
+}
+
+.ws-hero-article:last-child {
+    margin-bottom: 0px;
+}
+
+.ws-hero-article:hover {
+    cursor: pointer;
+}
+
+.ws-hero-article-title {
+    flex-grow: 1;
+    font-size: 24px;
+    padding-left: 25px;
+    font-family: 'Share Tech Mono';
+    color: var(--primary-color);
+}
+
+.ws-hero-article-framework {
+    position: relative;
+    width: 40px;
+    padding-left: 10px;
+    height: 100%;
+    text-align: center;
+    writing-mode: vertical-lr;
+    font-family: 'Roboto';
+    color: var(--background-primary);
+    background: var(--tertiary-color);
+}
+
+.ws-framework-label {
+    width: 35px;
+}
+
+
+/* Article Carousel */
+
+.ws-carousel {
+    margin-bottom: 50px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 75px;
+    scrollbar-width: thin;
+}
+
+.ws-carousel-card {
+    height: 65px;
+    width: 300px;
+    margin-right: 1.5rem;
+    background: var(--background-secondary);
+    display: inline-block;
+    position: relative;
+    border: 4px solid transparent;
+    transition: background 0.2s ease-out;
+}
+
+.ws-carousel-card.alternate {
+    color: white;
+}
+
+.ws-carousel-card:hover {
+    cursor: pointer;
+}
+
+.ws-carousel-card.javascript {
+    background: var(--javascript-color);
+}
+
+.ws-carousel-card.javascript:hover {
+    color: var(--javascript-color);
+    background: var(--background-primary);
+    border: 4px solid var(--javascript-color);
+}
+
+.ws-carousel-card.angular {
+    background: var(--angular-color);
+}
+
+.ws-carousel-card.angular:hover {
+    color: var(--angular-color);
+    background: var(--background-primary);
+    border: 4px solid var(--angular-color);
+}
+
+.ws-carousel-card.react {
+    background: var(--react-color);
+}
+
+.ws-carousel-card.react:hover {
+    color: var(--react-color);
+    background: var(--background-primary);
+    border: 4px solid var(--react-color);
+}
+
+.ws-carousel-card.vue {
+    background: var(--vue-color);
+}
+
+.ws-carousel-card.vue:hover {
+    color: var(--vue-color);
+    background: var(--background-primary);
+    border: 4px solid var(--vue-color);
+}
+
+.ws-carousel-card.css {
+    background: var(--css-color);
+}
+
+.ws-carousel-card.css:hover {
+    color: var(--css-color);
+    background: var(--background-primary);
+    border: 4px solid var(--css-color);
+}
+
+.ws-carousel-card.html {
+    background: var(--html-color);
+}
+
+.ws-carousel-card.html:hover {
+    color: var(--html-color);
+    background: var(--background-primary);
+    border: 4px solid var(--html-color);
+}
+
+.ws-carousel-card:last-child {
+    margin-right: 0px;
+}
+
+.ws-carousel-card-title {
+    font-size: 28px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    text-align: center;
+    line-height: 57px;
+    height: 100%;
+}
+
+.ws-carousel-card-title.alternate {
+    color: white;
+}
+
+
+/* Video Panel */
+
+.ws-videos {
+    margin-bottom: 50px;
+    height: 600px;
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+        'one one two'
+        'one one three'
+        'one one four';
+}
+
+.ws-video:nth-child(1) {
+    grid-area: one;
+    background: var(--background-secondary);
+}
+
+.ws-video:nth-child(2) {
+    grid-area: two;
+    background: var(--background-secondary);
+    overflow: hidden;
+}
+
+.ws-video:nth-child(3) {
+    grid-area: three;
+    background: var(--background-secondary);
+}
+
+.ws-video:nth-child(4) {
+    grid-area: four;
+    background: var(--background-secondary);
+}
+
+.ws-primary-video {
+    width: 100%;
+    height: 100%;
+}
+
+.ws-secondary-video {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Information Panel */
+
+.ws-information {
+    margin-bottom: 50px;
+    height: 600px;
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+        'one two';
+}
+
+.ws-popular {
+    grid-area: one;
+    background: var(--secondary-color);
+    border-radius: 25px;
+}
+
+.ws-news {
+    grid-area: two;
+    background: var(--tertiary-color);
+    border-radius: 25px;
+}
